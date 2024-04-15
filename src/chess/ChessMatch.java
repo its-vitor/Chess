@@ -9,6 +9,7 @@ public class ChessMatch {
 	public ChessMatch() {
 		this.board = new Board(8, 8);
 		matchPieces = new ChessPiece[board.getRow()][board.getColumn()];
+		initialSetup();
 	}
 	
 	public ChessPiece[][] getPieces() {
@@ -18,5 +19,9 @@ public class ChessMatch {
 			}
 		}
 		return matchPieces;
+	}
+	
+	private void initialSetup() {
+		
 	}
 }
