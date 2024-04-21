@@ -23,7 +23,11 @@ public class ChessMatch {
 		return matchPieces;
 	}
 	
+	private void placeNewPiece(char column, Integer row, ChessPiece piece) {
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
+	}
+	
 	private void initialSetup() {
-		this.board.placePiece(new Rook(board, Color.WHITE), new Position(0, 0));
+		placeNewPiece('a', 8, new Rook(board, Color.WHITE));
 	}
 }
