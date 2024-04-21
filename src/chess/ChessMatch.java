@@ -1,6 +1,8 @@
 package chess;
 
 import boardgame.Board;
+import boardgame.Position;
+import chess.pieces.Rook;
 
 public class ChessMatch {
 	private Board board;
@@ -22,6 +24,6 @@ public class ChessMatch {
 	}
 	
 	private void initialSetup() {
-		
+		this.board.placePiece(new Rook(board, Color.WHITE), new Position(0, 0));
 	}
 }
