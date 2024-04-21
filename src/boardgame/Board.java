@@ -57,7 +57,7 @@ public class Board {
 	}
 	
 	public boolean thereIsAPiece(Position position) {
+		if (!positionExists(position)) throw new BoardException("Posição não encontrada no tabuleiro.");
 		return piece(position) != null;
 	}
-	
 }
