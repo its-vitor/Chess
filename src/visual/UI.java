@@ -21,10 +21,15 @@ public class UI {
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
 			String position = sc.nextLine();
-			return new ChessPosition(position.charAt(0), Integer.parseInt(position.substring(1)));
+			return new ChessPosition(position.toLowerCase().charAt(0), Integer.parseInt(position.substring(1)));
 		} catch (RuntimeException e) {
 			throw new InputMismatchException("Posição de leitura inválida.");
 		}
+	}
+	
+	public static void clearScreen() {
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
 	}
 	
 	public static void printPiece(ChessPiece piece) {
