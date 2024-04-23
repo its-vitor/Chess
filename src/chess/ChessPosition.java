@@ -8,6 +8,7 @@ public class ChessPosition {
 	public Integer row;
 	
 	public ChessPosition(char column, Integer row) {
+		System.out.println("" + column + row);
 		if (column < 'a' || column > 'h' || row < 1 || row > 8) throw new ChessException("Erro de instanciação.");
 		this.column = column;
 		this.row = row;

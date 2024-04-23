@@ -24,7 +24,6 @@ public class UI {
 			return new ChessPosition(position.charAt(0), Integer.parseInt(position.substring(1)));
 		} catch (RuntimeException e) {
 			throw new InputMismatchException("Posição de leitura inválida.");
-			
 		}
 	}
 	
